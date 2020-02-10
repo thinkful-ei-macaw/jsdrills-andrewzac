@@ -1,5 +1,7 @@
 /* eslint-disable strict */
-const createGreeting = () => 'Hi, my name is Zac and I\'m 24 years old';
+const createGreeting = (name, age) => {
+  return `Hi, my name is ${name} and I'm ${age} years old`;
+};
 
 const greeting1 = createGreeting();
 // eslint-disable-next-line no-console
