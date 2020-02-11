@@ -64,3 +64,29 @@ const decode = (word) => {
 };
 
 
+// How Many Days in a Month Drill
+
+const daysInMonth = (month, leapYear = false) => {
+  switch(month) {
+  case 'January':
+  case 'March':
+  case 'May':
+  case 'July':
+  case 'August':
+  case 'October':
+  case 'December':
+    return  `${month} has 31 days`;
+    break;
+  case 'April':
+  case 'June':
+  case 'September':
+  case 'November':
+    return  `${month} has 30 days`;
+    break;
+  case 'February':
+    return leapYear ? 'February has 29 days' : 'February has 28 days';
+  default: 
+    throw new Error('Must provide a valid month.');
+  }
+};
+  
