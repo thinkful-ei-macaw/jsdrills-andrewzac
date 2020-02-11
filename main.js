@@ -89,4 +89,34 @@ const daysInMonth = (month, leapYear = false) => {
     throw new Error('Must provide a valid month.');
   }
 };
+
+
+// Rock Paper Scissors Drill
+
+const rockPaperScissors = (num) => {
+  const arr = ['rock', 'paper', 'scissors'];
+  const computer = Math.floor(Math.random() * 3) + 1;
+  if (num === 1 && computer === 3) {
+    return `${arr[0]} beats ${arr[2]}. You win!`;
+  } else if (num === 3 && computer === 1) {
+    return `${arr[0]} beats ${arr[2]}. Computer wins!`;
+  } else if (num === 2 && computer === 1) {
+    return `${arr[1]} beats ${arr[0]}. You win!`;
+  } else if (num === 1 && computer === 2) {
+    return `${arr[1]} beats ${arr[0]}. Computer wins!`;
+  } else if (num === 3 && computer === 2) {
+    return `${arr[2]} beats ${arr[1]}. You win!`;
+  } else if (num === 2 && computer === 3) {
+    return `${arr[1]} beats ${arr[2]}. Computer wins!`;
+  } else if (num === computer) {
+    return 'We have a tie!';
+  } else {
+    throw new Error('You need to enter a number between 1 and 3');
+  }
+};
   
+try {
+  console.log(rockPaperScissors(2));
+} catch(error) {
+  console.log(error.message);
+}
