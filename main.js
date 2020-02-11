@@ -110,10 +110,10 @@ const rockPaperScissors = (num) => {
     return `${arr[1]} beats ${arr[0]}. You win!`;
   } else if (num === 1 && computer === 2) {
     return `${arr[1]} beats ${arr[0]}. Computer wins!`;
-  } else if (num === 3 && computer === 1) {
-    return `${arr[2]} beats ${arr[0]}. You win!`;
-  } else if (num === 1 && computer === 3) {
-    return `${arr[2]} beats ${arr[0]}. Computer wins!`;
+  } else if (num === 3 && computer === 2) {
+    return `${arr[2]} beats ${arr[1]}. You win!`;
+  } else if (num === 2 && computer === 3) {
+    return `${arr[1]} beats ${arr[2]}. Computer wins!`;
   } else if (num === computer) {
     return 'We have a tie!';
   } else {
