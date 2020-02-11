@@ -22,3 +22,45 @@ try {
 } catch(error) {
   console.log('There is some error');
 }
+
+/****************
+Function Drills 2
+*****************/
+
+// Jedi Name Drill
+
+const jediName = (firstName, lastName) => {
+  return lastName.slice(0, 3) + firstName.slice(0, 2);
+}
+
+// To Infinity Drill
+
+function beyond(num){
+  if (num === Number.POSITIVE_INFINITY || num === Number.NEGATIVE_INFINITY){
+    console.log('And beyond');
+  } else if (num > 0) {
+    console.log('To infinity');
+  } else if (num < 0) {
+    console.log('To negative infinity');
+  } else { 
+    console.log('Staying home');
+  }
+}
+
+// Cracking the Code Drill
+
+const decode = (word) => {
+  let secret = '';
+  if (word[0] === 'a') {
+    secret += word[1];
+  } else if (word[0] === 'b') {
+    secret += word[2];
+  } else if (word[0] === 'c') {
+    secret += word[3];
+  } else if (word[0] === 'd') {
+    secret += word[4];
+  }
+  return secret;
+};
+
+
